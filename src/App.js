@@ -1,16 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-
-
-function App() {
-  return (
-    <div>
-
-    hello octen
-    </div>
-  );
+import './App.css'
+import Users from "./Components/Users/Users";
+export  default function App() {
+  return(
+      <div>
+        <Users/>
+      </div>
+  )
 }
-
-export default App;
-
-document
