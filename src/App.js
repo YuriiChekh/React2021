@@ -49,6 +49,7 @@ function App() {
         <div>
             <Menu/>
             <Simpsons items={simpsons}/>
+            <Menu/>
 
         </div>
 
