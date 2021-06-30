@@ -1,12 +1,11 @@
-
+import Posts from "./Components/Posts/Posts"
 
 
 
 function App() {
   return (
     <div>
-
-    hello octen
+        <Posts/>
     </div>
   );
 }
