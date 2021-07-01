@@ -11,12 +11,12 @@ export default function Posts(){
                 setPosts(value)
             })
     },[])
+
     return(
         <div>
             {
-                posts.map(post => {
-                    return <Post item={post} />
-                })
+                posts.map(post => <Post item={post} />
+                )
             }
         </div>
     )
