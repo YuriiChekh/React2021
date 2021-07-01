@@ -1,14 +1,20 @@
+import {useEffect, useState} from "react";
+import {getPosts} from "./services/Appi";
+import Posts from "./components/posts/Posts";
 
 
+export default function App() {
 
+    let[posts, setPosts]= useState([]);
 
-function App() {
-  return (
-    <div>
-
-    hello octen
-    </div>
-  );
-}
-
-export default App;
+    useEffect(()=>{
+        getPosts().then(value =>{
+            setPosts(value.data)
+        })
+    },[])
+        return(
+            <div>
+              <Posts items={posts}/>
+            </div>
+            )
+  }
