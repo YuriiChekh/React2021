@@ -1,11 +1,12 @@
-import Post from "../post/Posts"
+import Post from "../post/Post"
 export default function Posts(props) {
-    let {items}= props;
+    let {items, selectPost}= props;
     console.log(items);
     return(
             <div>
                 {
-                    items.map(p=><Post key={p.id} item={p}/>)
+                    items.map(p=><Post key={p.id} item={p} selectPost={selectPost}/>)
+
                 }
 
             </div>
