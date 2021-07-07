@@ -19,7 +19,7 @@ function App() {
                 return <h1>Home</h1>
             }} />
             <Route path={'/users'}>
-                <Users/>
+                <Users />
             </Route>
             <Route path={'/posts'}>
                 <Posts/>
