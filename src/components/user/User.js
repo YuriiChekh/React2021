@@ -11,7 +11,7 @@ export default function User({item}) {
                 }
 
             }>
-                Show posts
+                Show user
             </Link>
 
             </div>
