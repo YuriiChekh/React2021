@@ -1,25 +1,21 @@
-import {createRef} from "react";
+import {createRef, useState} from "react";
 
 
 function App() {
-  let myFormRef = createRef()
-  let myButton = createRef()
+    let [usernameInputState, setUsernameInputState] = useState('asdasd')
+    let onInputChange = (e) =>{
+        console.log(e.target.value);
+        setUsernameInputState(e.target.value)
+    }
+    return (
+        <div>
+            <form action={'/someUrl'} method={'post'}>
+                <input type="text" name={'username'} value={usernameInputState} onChange={onInputChange}/>
+                <button>save</button>
 
-  const onForSubmit = (e) =>{
-    e.preventDefault()
-    console.log(myFormRef.current.username.value);
-    console.log(myButton.current);
-
-  }
-  return (
-    <div>
-      <form action={'/someUrl'} method={'post'}  onSubmit={onForSubmit} ref={myFormRef}>
-        <input type="text" name={'username'}/>
-        <button ref={myButton}>save</button>
-
-      </form>
-    </div>
-  );
+            </form>
+        </div>
+    )
 }
 
 export default App;
